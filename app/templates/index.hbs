@@ -1,11 +1,53 @@
-Landing Page
+<div class="landing_container column align-center justify-center">
 
-{{#link-to "courses"}}
+    <div class="landing_header_text">
+        WE CAN DO IT. WE KNOW HOW!
+    </div>
 
-    link to courses
+    <div class="landing_sign_in_container column justify-center align-center">
+        <div class="landing_sign_in_text">
+            Sign in to your Coinbase account to <br/>authorize MyBitcoinAcademy.
+        </div>
 
-{{/link-to}}
+        <div class="landing_sign_in_text">
+            <b>You will be redirected to https://coinbase.com/oauth/redirect after authorization.</b>
+        </div>
 
-<div class="test"/>
+        <div class="landing_sign_in_divider"/>
+    </div>
 
+    <div class="landing_sign_in_container column">
+        <div class="landing_sign_in_input_container row align-center">
+            <div class="landing_sign_in_input_label">
+                Email:
+            </div>
+            <div class="landing_sign_in_input_field">
+                <input type="email" name="email"/>
+            </div>
+        </div>
+        <div class="landing_sign_in_divider"/>
+        <div class="landing_sign_in_input_container row align-center">
+            <div class="landing_sign_in_input_label">
+                Password:
+            </div>
+            <div class="landing_sign_in_input_field">
+                <input type="text" name="password"/>
+            </div>
+        </div>
+        <div class="landing_sign_in_divider"/>
+    </div>
+
+    <div class="landing_sign_in_container column justify-center align-center">
+        {{#link-to "courses"}}
+        <div class="landing_sign_in_button">
+            Sign In
+        </div>
+        {{/link-to}}
+        <div class="landing_create_account_text">
+            Create an Account - Forgot Password
+        </div>
+
+    </div>
+
+</div>
  {{outlet}}
