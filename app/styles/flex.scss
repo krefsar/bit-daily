@@ -1,0 +1,48 @@
+.row {
+  display: flex;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+@for $i from 2 through 8 {
+  .flex-#{$i} {
+    flex-grow: $i;
+    flex-basis: 0;
+  }
+}
+
+$justifyoptions: (
+  around: space-around,
+  between: space-between,
+  start: flex-start,
+  end: flex-end,
+  center: center
+);
+
+@each $classname, $flexsetting in $justifyoptions {
+  .justify-#{$classname} {
+    justify-content: #{$flexsetting};
+  }
+}
+
+$alignoptions: (
+  start: flex-start,
+  baseline: baseline,
+  end: flex-end,
+  center: center,
+  stretch: stretch
+);
+
+@each $classname, $flexsetting in $alignoptions {
+  .align-#{$classname} {
+    align-items: #{$flexsetting};
+  }
+}
