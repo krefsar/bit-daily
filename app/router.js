@@ -7,6 +7,13 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
+  this.route('home');
+  this.route('courses', function() {
+    this.route('coinbase-info');
+    this.route('buying');
+    this.route('sending');
+    this.route('purchasing');
+  });
 });
 
 export default Router;
