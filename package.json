@@ -18,7 +18,9 @@
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
+    "coinbase": "^2.0.7",
     "ember-ajax": "^3.0.0",
+    "ember-browserify": "^1.2.1",
     "ember-cli": "~3.0.0",
     "ember-cli-app-version": "^3.0.0",
     "ember-cli-babel": "^6.6.0",
