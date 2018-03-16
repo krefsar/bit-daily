@@ -1,5 +1,6 @@
 @import 'reset';
 @import 'ember-paper';
+@import 'index';
 @import 'flex';
 @import 'courses';
 @import 'colors';
@@ -26,4 +27,32 @@ html {
 
 .font__digital {
 	font-family: 'digitalr';
+}
+
+.application_header {
+    background-color: #1E3945;
+    height: 8rem;
+    width: 100vw;
+}
+
+.application_header_title_container {
+
+    height: 100%;
+    margin-left: 1rem;
+
+    .application_header_logo {
+        height: 60%;
+    }
+
+    .application_header_title {
+        color: #6EB9CE;
+        font-size: 2rem;
+        margin-left: 1rem;
+    }
+}
+
+.application_header_text {
+    color: #6EB9CE;
+    font-size: 1.25rem;
+    padding: 2rem;
 }
