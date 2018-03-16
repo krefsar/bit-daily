@@ -1,0 +1,49 @@
+.course__container {
+	background-color: white;
+	height: calc(100vh - 8rem);
+}
+
+.courses__options + .courses__options {
+	margin-top: 14rem;
+}
+
+.courses__list > h1 {
+	color: #415f6c;
+	font-size: 5.75rem;
+	font-weight: 700;
+	text-align: center;
+	text-transform: uppercase;
+	margin: 10rem 8rem;
+	padding: 5rem;
+	border-bottom: 2px solid #415f6c;
+}
+
+.name-bubble {
+	background-color: #1e3945;
+	border-radius: 1rem;
+	color: white;
+	font-size: 2.25rem;
+	padding: 1rem 4rem;
+}
+
+.bitcoin-value {
+	font-size: 2.5rem;
+	margin: 0 3rem;
+}
+
+.usd-value {
+	font-size: 1.75rem;
+}
+
+.value-change {
+	font-size: 1.75rem;
+	img {
+		height: 2rem;
+		width: 1rem;
+	}
+	margin: 0 1rem;
+}
+
+.user-info {
+	padding: 5rem;
+}

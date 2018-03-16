@@ -1,3 +1,29 @@
 @import 'reset';
 @import 'ember-paper';
 @import 'flex';
+@import 'courses';
+@import 'colors';
+@import 'course-option';
+@import 'course-icon';
+
+html {
+	font-size: 8px;
+}
+
+@font-face {
+    font-family: 'digitalb';
+    src: url('/fonts/AGENCYB.TTF');
+}
+
+@font-face {
+    font-family: 'digitalr';
+    src: url('/fonts/AGENCYR.TTF');
+}
+
+.font__digital--bold {
+	font-family: 'digitalb';
+}
+
+.font__digital {
+	font-family: 'digitalr';
+}

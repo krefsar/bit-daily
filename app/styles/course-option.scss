@@ -1,0 +1,20 @@
+.course-option {
+	width: 25vw;
+}
+
+.course-option__info {
+	margin-left: 2rem;
+	width: 18vw;
+	h1 {
+		color: #415f6c;
+		font-weight: 700;
+		font-size: 3rem;
+		margin-bottom: 2rem;
+		white-space: nowrap;
+	}
+
+	p {
+		color: #717452;
+		font-size: 2.25rem;
+	}
+}
