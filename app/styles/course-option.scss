@@ -1,5 +1,12 @@
 .course-option {
+	padding: 4rem;
 	width: 25vw;
+
+	&:hover {
+		box-sizing: content-box;
+		border: 2px solid #415f6c;
+		transition: 0.5s;
+	}
 }
 
 .course-option__info {
@@ -17,4 +24,18 @@
 		color: #717452;
 		font-size: 2.25rem;
 	}
+}
+
+.course__complete {
+	background-color: green;
+	color: white !important;
+}
+
+.course__pending {
+	background-color: yellow;
+	color: white;
+}
+
+.icon__supplement {
+	margin-right: 0.5rem;
 }

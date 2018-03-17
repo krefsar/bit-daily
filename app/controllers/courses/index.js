@@ -8,17 +8,20 @@ export default Controller.extend({
 		{
 			icon: 'user',
 			title: 'Coinbase Account',
-			description: 'Start using your very own Bitcoin wallet, made easy with Coinbase'
+			description: 'Start using your very own Bitcoin wallet, made easy with Coinbase',
+			status: 'complete'
 		},
 		{
 			icon: 'bitcoin',
 			title: 'Your First Bitcoin',
-			description: 'Learn how and why to invest in Bitcoin'
+			description: 'Learn how and why to invest in Bitcoin',
+			status: 'complete'
 		},
 		{
-			icon: 'usd',
-			title: 'Getting Paid',
-			description: 'Start accepting payments for your services, in Bitcoin'
+			icon: 'laptop',
+			title: 'Sending Bitcoin',
+			description: 'Spend your hard-earned coins at your favorite stores',
+			status: 'pending'
 		}
 	],
 	courses2: [
@@ -28,9 +31,9 @@ export default Controller.extend({
 			description: 'Don\'t get taken advantage of. Learn how to protect yourself and your funds'
 		},
 		{
-			icon: 'laptop',
-			title: 'Sending Bitcoin',
-			description: 'Spend your hard-earned coins at your favorite stores'
+			icon: 'usd',
+			title: 'Getting Paid',
+			description: 'Start accepting payments for your services, in Bitcoin'
 		},
 		{
 			icon: 'globe',
