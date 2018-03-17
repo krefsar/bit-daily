@@ -1,7 +1,7 @@
 import Controller from '@ember/controller';
 
 export default Controller.extend({
-	breadcrumbs: Ember.A(['Sending cryptocurrencies']),
+	breadcrumbs: Ember.A(['Sending Bitcoin']),
 	dialogStep: 0,
 
 	actions: {
