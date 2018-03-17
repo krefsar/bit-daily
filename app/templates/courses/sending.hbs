@@ -115,7 +115,7 @@
 
 				<div class='row justify-center'>
 					<div class='column coinbase__account'>
-						<div class='row coinbase__info justify-between'>
+						<div class='row coinbase__info justify-between align-center'>
 							<h1 class='coinbase__logo'>
 								coinbase
 							</h1>
@@ -127,11 +127,11 @@
 
 						<div class='row justify-between'>
 							<div class='column coinbase__current align-center'>
-								<h1>Current</h1>
-								<div class='interactive__input'>
+								<h6>Current</h6>
+								<div class='interactive__input row align-center'>
 									<span class='current__amount'>{{convertedCurrent}}</span>
 									{{#paper-select
-										class='input__select'
+										class='input__select__lower'
 									    options=currencyOptions
 									    selected=currentCurrency
 									    onChange=(action (mut currentCurrency))
@@ -141,11 +141,11 @@
 								</div>
 							</div>
 							<div class='column align-center coinbase__after'>
-								<h1>After transaction (with fees)</h1>
-								<div class='interactive__input'>
+								<h6>After transaction</h6>
+								<div class='interactive__input row align-center'>
 									<span class='after__amount'>{{convertedAfter}}</span>
 									{{#paper-select
-										class='input__select'
+										class='input__select__lower'
 									    options=currencyOptions
 									    selected=afterCurrency
 									    onChange=(action (mut afterCurrency))
