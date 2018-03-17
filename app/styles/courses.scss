@@ -4,7 +4,7 @@
 }
 
 .courses__options + .courses__options {
-	margin-top: 14rem;
+	margin-top: 3rem;
 }
 
 .courses__list > h1 {
@@ -13,7 +13,7 @@
 	font-weight: 700;
 	text-align: center;
 	text-transform: uppercase;
-	margin: 10rem 8rem;
+	margin: 5rem 8rem;
 	padding: 5rem;
 	border-bottom: 2px solid #415f6c;
 }
@@ -36,6 +36,7 @@
 }
 
 .value-change {
+	color: green;
 	font-size: 1.75rem;
 	img {
 		height: 2rem;
@@ -46,4 +47,14 @@
 
 .user-info {
 	padding: 5rem;
+}
+
+.coinbase-logo {
+	height: 6rem;
+	margin-left: 0.5rem;
+	margin-right: 2rem;
+}
+
+.coinbase-text {
+	font-size: 3rem;
 }

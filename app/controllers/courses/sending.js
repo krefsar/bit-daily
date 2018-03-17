@@ -152,11 +152,15 @@ export default Controller.extend({
 		},
 
 		sendMoney() {
-
+			this.set('submissionModalOpen', true);
+			this.set('submissionLoading', true);
+			setTimeout(() => {
+				this.set('submissionLoading', false);
+			}, 2300);
 		},
 
 		quitLesson() {
-			
+
 		}
 	}
 });
