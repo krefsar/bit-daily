@@ -39,6 +39,8 @@ a {
     background-color: #1E3945;
     height: 8rem;
     width: 100vw;
+	z-index: 1;
+	position: relative;
 }
 
 .application_header_title_container {

@@ -14,6 +14,7 @@ Router.map(function() {
     this.route('sending');
     this.route('purchasing');
   });
+  this.route('coinbase');
 });
 
 export default Router;
