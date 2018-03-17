@@ -1,6 +1,9 @@
 import Controller from '@ember/controller';
+import coinbase from 'npm:coinbase';
+import { inject as service } from '@ember/service';
 
 export default Controller.extend({
+	emberOauth2: service(),
 	courses1: [
 		{
 			icon: 'user',
@@ -34,5 +37,14 @@ export default Controller.extend({
 			title: 'Currency Exchange',
 			description: 'Learn the ins and outs of converting your funds between different currencies'
 		}
-	]
+	],
+
+	actions: {
+		testCoinbase() {
+			this.get('emberOauth2').setProvider('coinbase');
+			this.get('emberOauth2').authorize().then(function(response) {
+				console.log(response);
+			});
+		}
+	}
 });

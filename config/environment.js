@@ -11,6 +11,15 @@ module.exports = function(environment) {
         // Here you can enable experimental features on an ember canary build
         // e.g. 'with-controller': true
       },
+	  'ember-oauth2': {
+	    coinbase: {
+	      clientId: '43cf58782d825de618c1d4ccaf856012fbb5e3955cc69d7cacdf97a0db42b8b8',
+	      authBaseUri: 'https://www.coinbase.com/oauth/authorize',
+	      clientSecret: 'edd13b9a0e9a651a8dc9fa214d19a46f983bdc880102e1c5e3dd2ab662b4965f',
+		  redirectUri: 'urn:ietf:wg:oauth:2.0:oob',
+		  responseType: 'code'
+	    }
+	},
       EXTEND_PROTOTYPES: {
         // Prevent Ember Data from overriding Date.parse.
         Date: false
