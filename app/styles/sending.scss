@@ -101,6 +101,7 @@
 .interactive__title {
 	color: #1e3945;
 	font-size: 5rem;
+	margin-bottom: 4rem;
 }
 
 .interactive__bubble {
@@ -124,4 +125,48 @@
 
 .crumb__icon {
 	margin: 0 2rem;
+}
+
+.input__help {
+	background-color: #1e3945;
+	border-radius: 1rem;
+	color: white;
+	font-size: 2.5rem;
+	margin-bottom: 2rem;
+	padding: 1.5rem 4rem;
+	width: 24rem;
+}
+
+.input__section + .input__section {
+	margin-top: 8rem;
+}
+
+.input__select {
+	font-size: 3rem;
+	height: 3rem;
+	margin-left: 2rem;
+	padding-bottom: 3rem;
+}
+
+.sending__notifications {
+	background-color: #7c7c7c;
+	border-radius: 2rem;
+	margin-top: 3rem;
+	padding: 2rem;
+	width: 40rem;
+}
+
+.sending__notification + .sending__notification {
+	margin-top: 3rem;
+}
+
+.interactive__input {
+	label {
+		font-size: 2rem;
+	}
+
+	input {
+		font-size: 3rem;
+		margin-left: 2rem;
+	}
 }

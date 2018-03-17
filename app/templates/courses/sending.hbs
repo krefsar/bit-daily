@@ -9,37 +9,111 @@
 	</header>
 
 	<div class='row sending__main'>
-		<div class='column sending__interactive'>
-			<h1 class='interactive__title'>
-				Select Address Type
-			</h1>
+		{{#if (eq tutorialStep 1)}}
+			<div class='column sending__interactive'>
+				<h1 class='interactive__title'>
+					Select Address Type
+				</h1>
 
-			<div class='column justify-center flex'>
-				<h2 class='interactive__bubble'>
-					Which kind of address are you using?
-				</h2>
+				<div class='column justify-center flex'>
+					<h2 class='interactive__bubble'>
+						Which kind of address are you using?
+					</h2>
 
-				<div class='row address__options justify-center'>
-					<div class='column'>
-						<div class='interactive-image row align-center justify-center'>
-							<p class='wrappedpar font__digital'>
-								1AGRxqDB5WjU<br/>kBwHc9XYEjmkv1uc<br/>oUUy1s
-							</p>
+					<div class='row address__options justify-center'>
+						<div class='column cursor' {{action 'incrementTutorial'}}>
+							<div class='interactive-image row align-center justify-center'>
+								<p class='wrappedpar font__digital'>
+									1AGRxqDB5WjU<br/>kBwHc9XYEjmkv1uc<br/>oUUy1s
+								</p>
+							</div>
+
+							<h1 class='image__caption image__caption--off font__digital--bold'>Address</h1>
 						</div>
 
-						<h1 class='image__caption image__caption--off font__digital--bold'>Address</h1>
-					</div>
+						<div class='column'>
+							<div class='interactive-image row align-center justify-center'>
+								{{fa-icon 'qrcode' class='qrcode--big'}}
+							</div>
 
-					<div class='column'>
-						<div class='interactive-image row align-center justify-center'>
-							{{fa-icon 'qrcode' class='qrcode--big'}}
+							<h1 class='image__caption image__caption--off font__digital--bold'>QR Code</h1>
 						</div>
-
-						<h1 class='image__caption image__caption--off font__digital--bold'>QR Code</h1>
 					</div>
 				</div>
 			</div>
-		</div>
+		{{else}}
+			<div class='column sending__interactive'>
+				<h1 class='interactive__title'>
+					Complete Your Payment
+				</h1>
+
+				<div class='column'>
+					<div class='column input__section'>
+						<h2 class='input__help'>
+							Copy and paste the address here
+						</h2>
+
+						<div class='interactive__input'>
+							<label>Public Address:</label>
+
+							{{input value=publicAddress onChange=(action (mut publicAddress))}}
+						</div>
+
+							<div class='sending__notifications'>
+								{{#each addressErrorMessages as |errorMessage|}}
+									{{log 'error message' errorMessage}}
+									{{error-notification errorMessage=errorMessage}}
+								{{/each}}
+
+								{{#each addressWarningMessages as |warningMessage|}}
+									{{warning-notification warningMessage=warningMessage}}
+								{{/each}}
+
+								{{#each addressSuccessMessages as |successMessage|}}
+									{{success-notification successMessage=successMessage}}
+								{{/each}}
+							</div>
+					</div>
+
+					<div class='column justify-center input__section'>
+						<h2 class='input__help'>
+							Enter the amount you'd like to send
+						</h2>
+
+						<div class='interactive__input'>
+							<label>Amount:</label>
+							{{input value=amountToSend onChange=(action (mut amountToSend))}}
+
+							{{#paper-select
+								class='input__select'
+							    options=currencyOptions
+							    selected=currency
+							    onChange=(action (mut currency))
+							    as |currency|}}
+							    {{currency}}
+							{{/paper-select}}
+						</div>
+
+						{{#if (or (or amountErrorMessages.length amountSuccessMessages.length) amountWarningMessages.length)}}
+						<div class='sending__notifications'>
+							{{#each amountErrorMessages as |errorMessage|}}
+								{{log 'error message' errorMessage}}
+								{{error-notification errorMessage=errorMessage}}
+							{{/each}}
+
+							{{#each amountWarningMessages as |warningMessage|}}
+								{{warning-notification warningMessage=warningMessage}}
+							{{/each}}
+
+							{{#each amountSuccessMessages as |successMessage|}}
+								{{success-notification successMessage=successMessage}}
+							{{/each}}
+						</div>
+						{{/if}}
+					</div>
+				</div>
+			</div>
+		{{/if}}
 
 		<div class='column sending__steps'>
 		</div>
