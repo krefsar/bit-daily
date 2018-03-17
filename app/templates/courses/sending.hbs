@@ -114,48 +114,6 @@
 				</div>
 
 				<div class='row justify-center'>
-					<div class='column coinbase__account'>
-						<div class='row coinbase__info justify-between align-center'>
-							<h1 class='coinbase__logo'>
-								coinbase
-							</h1>
-
-							<h2 class='coinbase__user'>
-								Viktor Smith
-							</h2>
-						</div>
-
-						<div class='row justify-between'>
-							<div class='column coinbase__current align-center'>
-								<h6>Current</h6>
-								<div class='interactive__input row align-center'>
-									<span class='current__amount'>{{convertedCurrent}}</span>
-									{{#paper-select
-										class='input__select__lower'
-									    options=currencyOptions
-									    selected=currentCurrency
-									    onChange=(action (mut currentCurrency))
-									    as |currency|}}
-									    {{currency}}
-									{{/paper-select}}
-								</div>
-							</div>
-							<div class='column align-center coinbase__after'>
-								<h6>After transaction</h6>
-								<div class='interactive__input row align-center'>
-									<span class='after__amount'>{{convertedAfter}}</span>
-									{{#paper-select
-										class='input__select__lower'
-									    options=currencyOptions
-									    selected=afterCurrency
-									    onChange=(action (mut afterCurrency))
-									    as |currency|}}
-									    {{currency}}
-									{{/paper-select}}
-								</div>
-							</div>
-						</div>
-					</div>
 				</div>
 
 				<div class='row justify-center align-center'>
@@ -182,6 +140,7 @@
 					</div>
 				</div>
 
+				{{#if (gt dialogStep 1)}}
 				<div class="sending_steps_cell cell1 row">
 					<div class="sending_steps_cell_image_block column justify-center align-center">
 						<div class="sending_steps_cell_image_container column justify-center align-center">
@@ -197,12 +156,13 @@
 							</div>
 							<div class="sending_steps_cell_description_block column justify-center align-center">
 								<div class="sending_steps_cell_description">
-									We found our what we were looking at.  Either a public address or QR code.
+									We found out what we were looking at.  Either a public address or QR code.
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
+				{{/if}}
 
 				{{#if (eq tutorialStep 2)}}
 					<div class="sending_steps_cell cell2 row">
@@ -215,7 +175,7 @@
 							<div class="sending_steps_cell_text_container">
 								<div class="sending_steps_cell_text_header_container">
 									<div class="sending_steps_cell_text_header">
-										Enter public address and select amount
+										Copy and paste the public address and enter how much you'd like to send.
 									</div>
 								</div>
 								<div class="sending_steps_cell_description_block column justify-center align-center">
@@ -226,6 +186,50 @@
 							</div>
 						</div>
 					</div>
+				{{/if}}
+				{{#if (eq tutorialStep 2)}}
+				<div class='column coinbase__account'>
+					<div class='row coinbase__info justify-between align-center'>
+						<h1 class='coinbase__logo'>
+							coinbase
+						</h1>
+
+						<h2 class='coinbase__user'>
+							Viktor Smith
+						</h2>
+					</div>
+
+					<div class='row justify-between'>
+						<div class='column coinbase__current align-center'>
+							<h6>Current</h6>
+							<div class='interactive__input row align-center'>
+								<span class='current__amount'>{{convertedCurrent}}</span>
+								{{#paper-select
+									class='input__select__lower'
+								    options=currencyOptions
+								    selected=currentCurrency
+								    onChange=(action (mut currentCurrency))
+								    as |currency|}}
+								    {{currency}}
+								{{/paper-select}}
+							</div>
+						</div>
+						<div class='column align-center coinbase__after'>
+							<h6>After transaction</h6>
+							<div class='interactive__input row align-center'>
+								<span class='after__amount'>{{convertedAfter}}</span>
+								{{#paper-select
+									class='input__select__lower'
+								    options=currencyOptions
+								    selected=afterCurrency
+								    onChange=(action (mut afterCurrency))
+								    as |currency|}}
+								    {{currency}}
+								{{/paper-select}}
+							</div>
+						</div>
+					</div>
+				</div>
 				{{/if}}
 
 				{{#if tutorialComplete}}
