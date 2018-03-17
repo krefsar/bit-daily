@@ -1,4 +1,4 @@
-<div class='column sending__container'>
+<div class='column sending__container {{if (eq tutorialStep 2) 'sending__container--expanded' ''}}'>
 	<header class='sending__header row align-center'>
 		{{#each breadcrumbs as |crumb idx|}}
 			{{#if (not-eq idx 0)}}
@@ -47,9 +47,9 @@
 					Complete Your Payment
 				</h1>
 
-				<div class='column'>
+				<div class='column flex sending__inputs'>
 					<div class='column input__section'>
-						<h2 class='input__help'>
+						<h2 class='input__help font__digital'>
 							Copy and paste the address here
 						</h2>
 
@@ -75,8 +75,8 @@
 							</div>
 					</div>
 
-					<div class='column justify-center input__section'>
-						<h2 class='input__help'>
+					<div class='column input__section flex'>
+						<h2 class='input__help font__digital'>
 							Enter the amount you'd like to send
 						</h2>
 
@@ -159,11 +159,11 @@
 				</div>
 
 				<div class='row justify-center align-center'>
-					<button {{action 'sendMoney'}}>
+					<button {{action 'sendMoney'}} class='final__button approve font__digital--bold'>
 						{{fa-icon 'check'}} Approve
 					</button>
-					<button {{action 'quitLesson'}}>
-						{{fa-icon 'times error'}} Quit Lesson
+					<button {{action 'quitLesson'}} class='final__button quit font__digital'>
+						{{fa-icon 'times error'}} Quit
 					</button>
 				</div>
 			</div>
@@ -312,4 +312,34 @@
 		{{/paper-dialog}}
 	{{/if}}
 	{{/unless}}
+
+	{{#if submissionModalOpen}}
+			{{#paper-dialog class="flex-50 sending__dialog" clickOutsideToClose=false}}
+			  {{#paper-dialog-content}}
+				<div class='column justify-between'>
+					<div class='dialog__text column'>
+						<h1 class='dialog__title font__digital--bold'>
+							{{#if submissionLoading}}
+								Sending Bitcoin...
+							{{else}}
+								All set! You've completed this lesson!
+							{{/if}}
+						</h1>
+							<div class='dialog__loading row align-center justify-center'>
+						{{#if submissionLoading}}
+								{{fa-icon 'spinner' spin=true class='dialog__loader'}}
+						{{else}}
+							{{fa-icon 'check-circle' class='dialog__loader success'}}
+						{{/if}}
+							</div>
+					</div>
+				</div>
+			  {{/paper-dialog-content}}
+
+			  {{#paper-dialog-actions class="layout-row"}}
+				<span class="flex"></span>
+				{{#paper-button class='dialog__button'}}Back to Lessons{{/paper-button}}
+			  {{/paper-dialog-actions}}
+		{{/paper-dialog}}
+	{{/if}}
 </div>

@@ -2,6 +2,10 @@
 	min-height: calc(100vh - 8rem);
 }
 
+.sending__container--expanded {
+	height: 120vh;
+}
+
 .sending__dialog {
 	background-color: #1e3945 !important;
 }
@@ -70,7 +74,6 @@
 }
 
 .sending__main {
-	height: 100%;
 }
 
 .sending__interactive {
@@ -245,4 +248,31 @@
 .sending_steps_cell_complete_block {
 	color: #ffffff;
 	font-size: 4rem;
+}
+
+.final__button {
+	color: white;
+	border: none;
+	border-radius: 2rem;
+	font-size: 4rem;
+	outline: none;
+	padding: 2rem 4rem;
+	margin: 0 2rem;
+}
+
+.approve {
+	background-color: green;
+}
+
+.quit {
+	background-color: gray;
+}
+
+.dialog__loader {
+	font-size: 10rem;
+	margin-top: 2rem;
+}
+
+.sending__inputs {
+	margin: 4rem 0;
 }
