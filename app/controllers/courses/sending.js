@@ -1,7 +1,7 @@
 import Controller from '@ember/controller';
 
 export default Controller.extend({
-	breadcrumbs: Ember.A(['Sending cryptocurrencies', 'Select QR CODE']),
+	breadcrumbs: Ember.A(['Sending cryptocurrencies']),
 	dialogStep: 0,
 
 	actions: {
