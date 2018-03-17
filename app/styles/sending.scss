@@ -42,17 +42,22 @@
 	text-align: center;
 }
 
+.image__caption--off {
+	color: #1e3945;
+}
+
 .dialog__border-image {
 	border: 2px solid white;
 	border-radius: 10rem;
 	color: white;
-	font-size: 2rem;
+	font-size: 3rem;
 	height: 20rem;
 	width: 20rem;
 }
 
 .dialog__images {
 	margin-top: 3rem;
+	margin: 3rem 8rem 0 8rem;
 }
 
 .qrcode {
@@ -69,11 +74,41 @@
 }
 
 .sending__interactive {
-	background-color: red;
+	background-color: white;
+	padding: 4rem;
 	width: 65%;
 }
 
 .sending__steps {
 	background-color: green;
 	width: 35%;
+}
+
+.interactive-image {
+	border: 4px solid #1e3945;
+	border-radius: 13rem;
+	color: #1e3945;
+	font-size: 3.5rem;
+	height: 26rem;
+	margin: 0 4rem;
+	width: 26rem;
+}
+
+.qrcode--big {
+	font-size: 15rem;
+}
+
+.interactive__title {
+	color: #1e3945;
+	font-size: 5rem;
+}
+
+.interactive__bubble {
+	background-color: #1e3945;
+	border-radius: 1rem;
+	color: white;
+	font-size: 4rem;
+	margin: 3rem 12rem;
+	padding: 2rem;
+	text-align: center;
 }
