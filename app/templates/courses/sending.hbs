@@ -8,7 +8,7 @@
 		{{/each}}
 	</header>
 
-	<div class='row sending__main'>
+	<div class='row sending__main flex'>
 		{{#if (eq tutorialStep 1)}}
 			<div class='column sending__interactive'>
 				<h1 class='interactive__title'>
@@ -111,6 +111,60 @@
 						</div>
 						{{/if}}
 					</div>
+				</div>
+
+				<div class='row justify-center'>
+					<div class='column coinbase__account'>
+						<div class='row coinbase__info justify-between'>
+							<h1 class='coinbase__logo'>
+								coinbase
+							</h1>
+
+							<h2 class='coinbase__user'>
+								Viktor Smith
+							</h2>
+						</div>
+
+						<div class='row justify-between'>
+							<div class='column coinbase__current align-center'>
+								<h1>Current</h1>
+								<div class='interactive__input'>
+									<span class='current__amount'>{{convertedCurrent}}</span>
+									{{#paper-select
+										class='input__select'
+									    options=currencyOptions
+									    selected=currentCurrency
+									    onChange=(action (mut currentCurrency))
+									    as |currency|}}
+									    {{currency}}
+									{{/paper-select}}
+								</div>
+							</div>
+							<div class='column align-center coinbase__after'>
+								<h1>After transaction (with fees)</h1>
+								<div class='interactive__input'>
+									<span class='after__amount'>{{convertedAfter}}</span>
+									{{#paper-select
+										class='input__select'
+									    options=currencyOptions
+									    selected=afterCurrency
+									    onChange=(action (mut afterCurrency))
+									    as |currency|}}
+									    {{currency}}
+									{{/paper-select}}
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class='row justify-center align-center'>
+					<button {{action 'sendMoney'}}>
+						{{fa-icon 'check'}} Approve
+					</button>
+					<button {{action 'quitLesson'}}>
+						{{fa-icon 'times error'}} Quit Lesson
+					</button>
 				</div>
 			</div>
 		{{/if}}

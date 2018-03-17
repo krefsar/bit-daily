@@ -9,6 +9,8 @@ export default Controller.extend({
 	breadcrumbs: Ember.A(['Sending Bitcoin']),
 	currency: 'USD',
 	currencyOptions: ['BTC', 'USD'],
+	currentCurrency: 'USD',
+	afterCurrency: 'USD',
 	dialogStep: 0,
 	majorityThreshold: 0.75,
 	publicAddress: '',
@@ -37,6 +39,23 @@ export default Controller.extend({
 
 			return total;
 		}, Ember.A([]));
+	}),
+
+	convertedCurrent: computed('currentCurrency', function() {
+		if (this.get('currentCurrency') === 'BTC') {
+			return this.get('balance') / this.get('usdToBtc');
+		}
+
+		return this.get('balance');
+	}),
+
+	convertedAfter: computed('afterCurrency', 'amountToSend', 'currency', function() {
+		if (this.get('afterCurrency') === 'BTC') {
+			let convertedBalance = this.get('balance') / this.get('usdToBtc');
+			return convertedBalance - fees - (this.get('amountToSend'));
+		}
+
+		return this.get('balance') - fees - this.get('amountToSend');
 	}),
 
 	amountErrorMessages: computed('amountToSend', 'currency', function() {
@@ -130,6 +149,14 @@ export default Controller.extend({
 			this.incrementProperty('tutorialStep');
 			this.incrementProperty('dialogStep');
 			this.get('breadcrumbs').pushObject('Complete Payment')
+		},
+
+		sendMoney() {
+
+		},
+
+		quitLesson() {
+			
 		}
 	}
 });
