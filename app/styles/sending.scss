@@ -10,6 +10,39 @@
 	background-color: #1e3945 !important;
 }
 
+.coinbase__account {
+	background-color: #f6f6f6;
+	border-color: #A7A7A7;
+	border-width: 0.25rem;
+	border-style: solid;
+	padding: 1rem;
+}
+
+.current__amount {
+}
+
+h6 {
+	font-size: 3rem;
+	margin-top: 1rem;
+}
+
+.coinbase__logo {
+	color: #3085BE;
+	font-size: 3rem;
+}
+
+.coinbase__user {
+	font-size: 2rem;
+}
+
+.current__amount {
+	font-size: 2rem;
+}
+
+.after__amount {
+	font-size: 2rem;
+}
+
 .dialog__image {
 	height: 18rem;
 	width: 18rem;
@@ -50,6 +83,28 @@
 	color: #1e3945;
 }
 
+.interactive__input {
+	background-color: #ffffff;
+	border-radius: 1rem;
+}
+
+.input__select {
+	margin: 0rem;
+	font-size: 3rem;
+	height: 3rem;
+	margin-left: 2rem;
+	padding-bottom: 3rem;
+}
+
+.input__select__lower {
+	margin: 0rem;
+	font-size: 3rem;
+	height: 3rem;
+	margin-left: 2rem;
+	padding-bottom: 1rem;
+}
+
+
 .dialog__border-image {
 	border: 2px solid white;
 	border-radius: 10rem;
@@ -71,6 +126,14 @@
 .wrappedpar {
 	text-align: center;
 	padding: 1rem;
+}
+
+.md-select-value {
+	border-bottom-width: 0rem;
+}
+
+.ember-power-select-selected-item {
+	font-size: 2rem;
 }
 
 .sending__main {
@@ -149,12 +212,6 @@
 	margin-top: 8rem;
 }
 
-.input__select {
-	font-size: 3rem;
-	height: 3rem;
-	margin-left: 2rem;
-	padding-bottom: 3rem;
-}
 
 .sending__notifications {
 	background-color: #7c7c7c;
