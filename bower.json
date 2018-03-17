@@ -1,6 +1,7 @@
 {
   "name": "bit-daily",
   "dependencies": {
-    "reset-scss": "^2.0.2"
+    "reset-scss": "^2.0.2",
+    "particles.js": "^2.0.0"
   }
 }

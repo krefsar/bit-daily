@@ -16,7 +16,7 @@ module.exports = function(environment) {
 	      clientId: '43cf58782d825de618c1d4ccaf856012fbb5e3955cc69d7cacdf97a0db42b8b8',
 	      authBaseUri: 'https://www.coinbase.com/oauth/authorize',
 	      clientSecret: 'edd13b9a0e9a651a8dc9fa214d19a46f983bdc880102e1c5e3dd2ab662b4965f',
-		  redirectUri: 'urn:ietf:wg:oauth:2.0:oob',
+		  redirectUri: 'http://127.0.0.1:4200/coinbase',
 		  responseType: 'code'
 	    }
 	},
@@ -38,6 +38,7 @@ module.exports = function(environment) {
     // ENV.APP.LOG_TRANSITIONS = true;
     // ENV.APP.LOG_TRANSITIONS_INTERNAL = true;
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
+
   }
 
   if (environment === 'test') {

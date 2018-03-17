@@ -6,50 +6,34 @@
 .landing_header_text {
     color: #ffffff;
     font-size: 6rem;
-}
-
-.landing_sign_in_container {
-    background-color: #B5B1B2;
-    width: 30%;
-    text-align: center;
-}
-
-.landing_sign_in_divider {
-    width: 100%;
-    background-color: #969698;
-    height: 0.5rem;
-}
-
-.landing_sign_in_text {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-}
-
-.landing_sign_in_input_container {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-}
-
-.landing_sign_in_input_label {
-    margin-left: 2rem;
-    color: #000000;
-    text-align: center;
-}
-
-.landing_sign_in_input_field {
-    margin-left: 2rem;
-    color: #ffffff;
-    text-align: center;
+    z-index: 1;
+    position: relative;
 }
 
 .landing_sign_in_button {
     color: #ffffff;
-    width: 80%;
     padding-top: 1rem;
     padding-bottom: 1rem;
     background-color: #1E3945;
+    font-size: 2rem;
+    padding: 4rem;
+    margin-top: 2rem;
+    z-index: 1;
+    position: relative;
 }
 
-.landing_create_account_text {
-    padding: 1rem;
+.particles_container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 0;
+}
+
+.sign_in_icon {
+    height: 60vh;
+    margin-top: 5rem;
+    z-index: 1;
+    position: relative;
 }
