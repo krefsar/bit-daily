@@ -1,1 +1,85 @@
-{{outlet}}
+<div class='column sending__container'>
+	<header class='sending__header row align-center'>
+		{{#each breadcrumbs as |crumb idx|}}
+			{{#if (not-eq idx 0)}}
+				{{fa-icon 'chevron-right' class='crumb__icon'}}
+			{{/if}}
+			<span class='crumb__text'>{{crumb}}</span>
+		{{/each}}
+	</header>
+
+	{{outlet}}
+
+	{{#unless (gt dialogStep 1)}}
+		{{#if (eq dialogStep 0)}}
+			{{#paper-dialog class="flex-50 sending__dialog" clickOutsideToClose=false}}
+			  {{#paper-dialog-content}}
+				<div class='column justify-between'>
+					<div class='row justify-around align-center'>
+						<img src='/assets/dialog1_hand.png' class='dialog__image' />
+						{{fa-icon 'long-arrow-right' class='dialog__icon'}}
+						<img src='/assets/dialog1_globe.png' class='dialog__image' />
+					</div>
+
+					<div class='dialog__text column'>
+						<h1 class='dialog__title font__digital--bold'>
+							Sending Bitcoin
+						</h1>
+						<p class='dialog__tips font__digital'>
+							You're about to send some Bitcoin. That's great! Whether you're buying something online, or sending money to a friend, we'll help guide you through the process.
+						</p>
+					</div>
+				</div>
+			  {{/paper-dialog-content}}
+
+			  {{#paper-dialog-actions class="layout-row"}}
+				<span class="flex"></span>
+				{{#paper-button onClick=(action "incrementDialog") class='dialog__button'}}Next{{/paper-button}}
+			  {{/paper-dialog-actions}}
+		{{/paper-dialog}}
+	{{else}}
+			{{#paper-dialog class="flex-50 sending__dialog" clickOutsideToClose=false}}
+			  {{#paper-dialog-content}}
+				<div class='column justify-between'>
+					<div class='dialog__text'>
+						<h1 class='dialog__title font__digital--bold'>
+							There are two kinds of addresses
+						</h1>
+					</div>
+
+					<div class='row justify-around align-center dialog__images'>
+						<div class='column'>
+							<div class='dialog__border-image row align-center justify-center'>
+								<p class='wrappedpar'>
+									1AGRxqDB5WjU<br/>kBwHc9XYEjmkv1uc<br/>oUUy1s
+								</p>
+							</div>
+
+							<h1 class='image__caption font__digital--bold'>Key</h1>
+						</div>
+
+						<div class='column'>
+							<div class='dialog__border-image row align-center justify-center'>
+								{{fa-icon 'qrcode' class='qrcode'}}
+							</div>
+
+							<h1 class='image__caption font__digital--bold'>QR Code</h1>
+						</div>
+					</div>
+
+					<div class='dialog__text column'>
+						<p class='dialog__tips font__digital'>
+							When you want to send money, you'll see one of these two addresses. Take note of which one you see.
+						</p>
+					</div>
+				</div>
+			  {{/paper-dialog-content}}
+
+			  {{#paper-dialog-actions class="layout-row"}}
+				<span class="flex"></span>
+				{{#paper-button onClick=(action "incrementDialog") class='dialog__button'}}Begin{{/paper-button}}
+			  {{/paper-dialog-actions}}
+		{{/paper-dialog}}
+	{{/if}}
+	{{/unless}}
+</div>

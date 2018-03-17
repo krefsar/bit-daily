@@ -1,0 +1,65 @@
+.sending__container {
+	height: calc(100vh - 8rem);
+}
+
+.sending__dialog {
+	background-color: #1e3945 !important;
+}
+
+.dialog__image {
+	height: 18rem;
+	width: 18rem;
+}
+
+.dialog__icon {
+	color: white;
+	font-size: 10rem;
+}
+
+.dialog__text {
+	color: white;
+	margin-top: 2rem;
+	text-align: center;
+}
+
+.dialog__title {
+	font-size: 5rem;
+}
+
+.dialog__tips {
+	font-size: 3rem;
+	margin-top: 2rem;
+}
+
+.dialog__button {
+	color: white;
+}
+
+.image__caption {
+	color: white;
+	font-size: 2.5rem;
+	margin-top: 2rem;
+	text-align: center;
+}
+
+.dialog__border-image {
+	border: 2px solid white;
+	border-radius: 10rem;
+	color: white;
+	font-size: 2rem;
+	height: 20rem;
+	width: 20rem;
+}
+
+.dialog__images {
+	margin-top: 3rem;
+}
+
+.qrcode {
+	font-size: 12rem;
+}
+
+.wrappedpar {
+	text-align: center;
+	padding: 1rem;
+}
